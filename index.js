@@ -15,13 +15,9 @@ console.log("JS");
 let userInput = "";
 let operator = "";
 let userInput2 = "";
-var allInputs = document.querySelectorAll("input");
-console.log(allInputs);
-// Pressing number buttons
-var elements = document.getElementsByTagName("input");
-console.log(elements);
 
-// function clickButtons() {
+var elements = document.getElementsByTagName("input");
+
 for (let element of elements) {
   element.onclick = function (event) {
     var value = element.value;
@@ -29,27 +25,18 @@ for (let element of elements) {
     console.log(value, realValue);
     if (isNaN(realValue)) {
       if (value == "=" && userInput2.length > 0) {
+        var realUserInput = Number(userInput);
+        var realUserInput2 = Number(userInput2);
         if (operator == "+") {
-          var realUserInput = Number(userInput);
-          var realUserInput2 = Number(userInput2);
           var result = realUserInput + realUserInput2;
-          console.log(result);
         } else if (operator == "-") {
-          var realUserInput = Number(userInput);
-          var realUserInput2 = Number(userInput2);
           var result = realUserInput - realUserInput2;
-          console.log(result);
         } else if (operator == "*") {
-          var realUserInput = Number(userInput);
-          var realUserInput2 = Number(userInput2);
           var result = realUserInput * realUserInput2;
-          console.log(result);
         } else if (operator == "/") {
-          var realUserInput = Number(userInput);
-          var realUserInput2 = Number(userInput2);
           var result = realUserInput / realUserInput2;
-          console.log(result);
         }
+        console.log(result);
         userInput = "";
         userInput2 = "";
         operator = "";
@@ -66,7 +53,3 @@ for (let element of elements) {
     console.log(userInput, operator, userInput2);
   };
 }
-// }
-
-// hitting the '=' button
-// form.addEventListener("evaluate", function (e) {});
