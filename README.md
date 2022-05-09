@@ -1,2 +1,1 @@
-# Calculator
-Calcutron
+# calculator-project
